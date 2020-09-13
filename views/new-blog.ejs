@@ -1,0 +1,34 @@
+<%- include('./includes/header.ejs') %>
+<%- include('./includes/nav.ejs') %>
+<body>
+  
+  <div>
+    <form action="/new-blog" method="POST" >
+  <div>
+    <div>
+      <label for="title">title</label>
+      <input type="text" name="title" class="field">
+    </div>
+    <div>
+      <label for="item1">item 1:</label>
+      <textarea name="item1" id="blog-item1" cols="30" rows="10" class="field"></textarea>
+    </div>
+    <div>
+      <label for="item2">item 2 (optional):</label>
+      <textarea name="item2" id="blog-item2" cols="30" rows="10" class="field"></textarea>
+    </div>
+    <div>
+      <label for="item3">item 3 (optional):</label>
+      <textarea name="item3" id="blog-item3" cols="30" rows="10" class="field"></textarea>
+    </div>
+    <div>
+      <label for="tags" >tags</label>
+      <input type="text" name="tags" class="field">
+    </div>
+    
+  </div>
+  
+  <button type="submit">add entry</button>
+  </form>
+</div>
+</body>

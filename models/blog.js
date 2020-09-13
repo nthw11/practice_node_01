@@ -1,35 +1,31 @@
-const fs = require('fs');
-const path = require('path');
+const Sequelize = require('sequelize');
+const sequelize = require('../util/database');
 
-const p = path.join(module.exports = path.dirname(process.mainModule.filename), 'data', 'blogs.json');
+const Blog = sequelize.define('blog', {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    allowNull: false,
+    primaryKey: true
+  },
+  title: Sequelize.STRING,
+  item1: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  item2: {
+    type: Sequelize.STRING,
+    allowNull: true
+  },
+  item3: {
+    type: Sequelize.STRING,
+    allowNull: true
+  },
+  tags: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  createdAt: { type: Sequelize.DATE}
+});
 
-const getBlogsFromFile = (cb) => {
-  fs.readFile(p, (err, fileContent) => {
-    if (err) {
-      return cb([]);
-    }
-    cb(JSON.parse(fileContent));
-  });
-}
-
-const blogs = [];
-
-module.exports = class Blog {
-  constructor(title, body, tags) {
-    this.title = title;
-    this.body = body;
-    this.tags = tags;
-  }
-
-  save() {
-    getBlogsFromFile(blogs => {blogs.push(this);
-      fs.writeFile(p, JSON.stringify(blogs), (err) => {
-        console.log(err);
-      });
-
-    });
-  }
-  static fetchAll(cb) {
-    getBlogsFromFile(cb);
-  }
-}
+module.exports = Blog;

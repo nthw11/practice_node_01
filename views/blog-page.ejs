@@ -1,10 +1,35 @@
+<%- include('./includes/header.ejs') %>
 <%- include('./includes/nav.ejs') %>
 
-<h1>individual blog view will be here</h1>
-<h2>this is the title</h2>
-<p>body will be her Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi doloremque in, tempora sint exercitationem perferendis reiciendis eveniet adipisci omnis. Numquam dignissimos recusandae provident tempora illum repellat, dolore incidunt fugiat!</p>
-<ul>
-  <li>tag</li>
-  <li>tag</li>
-  <li>tag</li>
-</ul>
+<body class="blog-page">
+<div>
+  <article>
+    
+  <div>
+    <h1 class="blog-title"><%= blog.title %></h1>
+  </div>
+  <div>
+    <p class="blog-item"><%= blog.item1 %></p>
+  </div>
+  <div>
+    <p class="blog-item"><%= blog.item2 %></p>
+  </div>
+  <div>
+    <p class="blog-item"><%= blog.item3 %></p>
+  </div>
+  <div>
+    <h4 class="tags"><%= blog.tags %></h4>
+  </div>
+  <div>
+    <h5><%= blog.createdAt %></h5>
+  </div>
+  <button>
+    <a href="/edit-blog/<%= blog.id %>?edit=true" class="btn">edit</a>
+  </button>
+  
+  
+</article>
+</div>
+
+  
+</body>

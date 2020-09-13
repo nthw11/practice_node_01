@@ -1,8 +1,29 @@
+<%- include('./includes/header.ejs') %>
 <%- include('./includes/nav.ejs') %>
 
-<h2>blogs list</h2>
-<ul>
-  <li>one</li>
-  <li>two</li>
-  <li>three</li>
-</ul>
+<body>
+  
+  <main>
+    
+  <% if (blogEntries.length > 0) { %>
+    <% for (let blog of blogEntries) { %>
+    <div>
+      <article class="blog-snip">
+        <h2><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h2>
+        <p><%= blog.item1 %></p>
+        <!-- <p><%= blog.item2 %></p>
+          <p><%= blog.item3 %></p> -->
+          <h4><%= blog.tags %></h4>
+          <h5><%= blog.createdAt %></h5>
+        
+      </article>
+      <% } %>
+      <% } else { %>
+        <h1>no blogs to see</h1> 
+        <% } %>
+      </div>
+      <button><a href="/all-blogs">all blogs</a></button>
+      
+
+</main>
+    </body>

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+
+* {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+.navbar li{
+  list-style: none;
+}
+
+
+.blog-snip {
+  color: red;
+}
+
+.field {
+  border: 2px solid darkgoldenrod;
+  border-radius: 5px;
+}
+.blog-page{
+  background-color: #AED9E0;
+}
+.blog-title {
+  width: 500px;
+  box-shadow: inset 4px 4px 6px .2px #5F758E2f;
+  padding: 15px;
+}
+.blog-item {
+  padding: 10px;
+  width: 500px;
+  box-shadow: inset 2px 2px 3px .2px #5F758E2f;
+}
+.tags {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #33658A;
+  border-radius: 5px;
+  background-color: #33658A;
+  box-shadow: 2px 2px 2px 2px #5F758E2f;
+}
