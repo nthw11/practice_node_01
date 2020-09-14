@@ -2,38 +2,141 @@
 
 * {
   font-family: 'Kumbh Sans', sans-serif;
+  margin-top: 0;
+}
+.navbar {
+  background-image: linear-gradient(to right, rgb(94, 94, 94), white);
+
+  width: 100%;
+  height: 50px;
+  padding: -5px 0px 0px 10px;
+  position: sticky;
+  top: 0;
+  border-bottom-left-radius: 5px;
+
 }
 .navbar li{
   list-style: none;
+  
 }
-
-
+.navbar a:link, a:visited {
+  text-decoration: none;
+  transition: 1s;
+}
+.navbar a:hover {
+  transition: 1s;
+  color: #f818d3;
+}
+.navbar-border {
+  width: 100%;
+  height: 60px;
+  padding: -5px 0px 0px 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
 .blog-snip {
-  color: red;
+  color: white;
+  margin: 10px;
+  padding: 10px;
 }
 
 .field {
-  border: 2px solid darkgoldenrod;
+  border: 2px solid #f818d3;
   border-radius: 5px;
 }
 .blog-page{
-  background-color: #AED9E0;
+  background-color: white;
+}
+.blog-page-card {
+  width: 60%;
+  
+  border-radius: 3px;
+  background-image: linear-gradient(to right, rgb(94,94,94), rgb(150, 150, 150), white);
 }
 .blog-title {
   width: 500px;
-  box-shadow: inset 4px 4px 6px .2px #5F758E2f;
+  
   padding: 15px;
+  
 }
 .blog-item {
   padding: 10px;
   width: 500px;
-  box-shadow: inset 2px 2px 3px .2px #5F758E2f;
+  
 }
 .tags {
   padding: 10px;
   width: 200px;
-  border: 2px solid #33658A;
+  
   border-radius: 5px;
-  background-color: #33658A;
+  background-color: #444444;
   box-shadow: 2px 2px 2px 2px #5F758E2f;
+}
+.btn {
+  width: 75px;
+  height: 50px;
+  background-color: #AAAAAA;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 5px;
+  transition: 1s;
+}
+.btn:hover {
+  background-color: #f818d3;
+  transition: 1s;
+}
+.btn a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+.blog-list-title{
+  color: white;
+  transition: 1s;
+}
+.blog-list-title a:link, a:visited {
+  text-decoration: none;
+  transition: 1s;
+}
+.blog-list-title a:hover {
+  color: #f818d3;
+  transition: 1s;
+}
+
+.blog-card {
+  width: 500px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, rgb(94,94,94), rgb(150, 150, 150), white);
+}
+
+input[type="text"] {
+  width: 400px;
+  height: 75px;
+  display: inline-block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+textarea {
+  width: 400px;
+  height: 125px;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.entry-form {
+  margin: 15px 0px 10px 30px;
+
+}
+.blog-form-text {
+  font-size: 28px;
+  font-weight: 500;
+}
+.blog-form-btn {
+  margin-left: 30px;
+}
+.blog-form-page {
+  background-image: linear-gradient(to right, rgb(94,94,94), rgb(150, 150, 150), white);
+  padding-top: 5px;
+  border-top-left-radius: 5px;
 }

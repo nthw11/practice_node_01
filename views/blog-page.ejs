@@ -2,7 +2,7 @@
 <%- include('./includes/nav.ejs') %>
 
 <body class="blog-page">
-<div>
+<div class="blog-page-card">
   <article>
     
   <div>
@@ -23,8 +23,8 @@
   <div>
     <h5><%= blog.createdAt %></h5>
   </div>
-  <button>
-    <a href="/edit-blog/<%= blog.id %>?edit=true" class="btn">edit</a>
+  <button class="btn">
+    <a href="/edit-blog/<%= blog.id %>?edit=true" >edit</a>
   </button>
   
   

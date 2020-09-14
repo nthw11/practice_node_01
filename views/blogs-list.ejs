@@ -7,9 +7,9 @@
     
   <% if (blogEntries.length > 0) { %>
     <% for (let blog of blogEntries) { %>
-    <div>
+    <div class="blog-card">
       <article class="blog-snip">
-        <h2><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h2>
+        <h2 class="blog-list-title"><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h2>
         <p><%= blog.item1 %></p>
         <!-- <p><%= blog.item2 %></p>
           <p><%= blog.item3 %></p> -->
@@ -17,12 +17,12 @@
           <h5><%= blog.createdAt %></h5>
         
       </article>
+    </div>
       <% } %>
       <% } else { %>
         <h1>no blogs to see</h1> 
         <% } %>
-      </div>
-      <button><a href="/all-blogs">all blogs</a></button>
+      <button class="btn"><a href="/all-blogs">all blogs</a></button>
       
 
 </main>

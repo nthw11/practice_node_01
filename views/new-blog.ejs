@@ -2,33 +2,38 @@
 <%- include('./includes/nav.ejs') %>
 <body>
   
-  <div>
+  <div class="blog-form-page">
     <form action="/new-blog" method="POST" >
-  <div>
+  <div class="entry-form">
     <div>
-      <label for="title">title</label>
+      <label for="title" class="blog-form-text">title</label>
+      <br>
       <input type="text" name="title" class="field">
     </div>
     <div>
-      <label for="item1">item 1:</label>
+      <label for="item1" class="blog-form-text">item 1:</label>
+      <br>
       <textarea name="item1" id="blog-item1" cols="30" rows="10" class="field"></textarea>
     </div>
     <div>
-      <label for="item2">item 2 (optional):</label>
+      <label for="item2" class="blog-form-text">item 2 (optional):</label>
+      <br>
       <textarea name="item2" id="blog-item2" cols="30" rows="10" class="field"></textarea>
     </div>
     <div>
-      <label for="item3">item 3 (optional):</label>
+      <label for="item3" class="blog-form-text">item 3 (optional):</label>
+      <br>
       <textarea name="item3" id="blog-item3" cols="30" rows="10" class="field"></textarea>
     </div>
     <div>
-      <label for="tags" >tags</label>
+      <label for="tags" class="blog-form-text">tags</label>
+      <br>
       <input type="text" name="tags" class="field">
     </div>
     
   </div>
   
-  <button type="submit">add entry</button>
+  <button type="submit" class="btn blog-form-btn">add entry</button>
   </form>
 </div>
 </body>

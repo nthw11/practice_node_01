@@ -86,7 +86,7 @@ exports.getEditBlog = (req, res, next) => {
   const blogId = req.params.blogId;
   Blog.findByPk(blogId)
     .then((blogs) => {
-      console.log(blogs);
+
       res.render('edit-blog', {
         pageTitle: 'edit blog',
         path: 'edit-blog',
@@ -132,7 +132,7 @@ exports.postDeleteBlog = (req, res, next) => {
       return blog.destroy();
     })
     .then(result => {
-      console.log('blog post deleted :(');
+  
       res.redirect('/recent-blogs');
     })
     .catch(err => console.log(err));
